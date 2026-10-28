@@ -1,0 +1,9 @@
+{
+  "name": "gestor-actividades",
+  "version": "1.0.0",
+  "description": "Sistema web para gestionar actividades de empleados",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js"
+  }
+}

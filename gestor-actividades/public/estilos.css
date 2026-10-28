@@ -1,0 +1,184 @@
+/* Ajusta el tamaño de los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos generales de la pagina */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f9;
+    color: #263238;
+}
+
+/* Encabezado azul con texto centrado */
+header {
+    background-color: #174a7e;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+/* Espacio donde se encuentra el contenido */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+/* Diseño de los cuadros principales */
+.panel {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #00000012;
+}
+
+/* Color de los titulos */
+h2 {
+    color: #174a7e;
+    margin-top: 0;
+}
+
+/* Acomoda las etiquetas de los campos */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+/* Diseño de las cajas de texto */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bdc8d3;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+/* Permite cambiar el tamaño del campo de descripcion */
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Resalta el campo que se esta utilizando */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #70a9e8;
+}
+
+/* Acomoda los botones */
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Diseño general de los botones */
+button {
+    background-color: #174a7e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Cambia el color cuando se pasa el cursor */
+button:hover {
+    background-color: #103657;
+}
+
+/* Color para los botones secundarios */
+.secundario {
+    background-color: #687786;
+}
+
+/* Espacio entre las actividades */
+.actividades {
+    margin-top: 20px;
+}
+
+/* Cuadro que contiene cada actividad */
+.tarjeta {
+    border: 1px solid #d8e0e8;
+    border-left: 5px solid #174a7e;
+    padding: 16px;
+    border-radius: 6px;
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+}
+
+/* Separacion del titulo de cada actividad */
+.tarjeta h3 {
+    margin: 0 0 10px;
+}
+
+/* Espacio entre las lineas de la descripcion */
+.tarjeta p {
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+/* Apariencia del estado */
+.estado {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Color para las tareas pendientes */
+.estado-pendiente {
+    color: #805500;
+    background-color: #fff0c2;
+}
+
+/* Color para las tareas en proceso */
+.estado-en-proceso {
+    color: #1558a6;
+    background-color: #dcecff;
+}
+
+/* Color para las tareas terminadas */
+.estado-completada {
+    color: #176b3a;
+    background-color: #d9f5e3;
+}
+
+/* Acomoda el texto del pie de pagina */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #5c6770;
+}
+
+/* Oculta el espacio del mensaje cuando esta vacio */
+#mensaje:empty {
+    display: none;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    main {
+        width: 94%;
+    }
+
+    .panel {
+        padding: 17px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

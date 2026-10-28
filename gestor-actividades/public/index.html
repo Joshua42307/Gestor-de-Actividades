@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titulo de la pagina -->
+    <title>Gestor de actividades</title>
+
+    <!-- Archivos que dan diseño y funcionamiento a la pagina -->
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Encabezado principal -->
+    <header>
+        <h1>Gestor de actividades</h1>
+        <p>Organiza las tareas de la empresa</p>
+    </header>
+
+    <main>
+        <!-- Formulario para registrar o editar actividades -->
+        <section class="panel">
+            <h2 id="tituloFormulario">Registrar actividad</h2>
+
+            <form id="formulario">
+                <!-- Nombre de la actividad -->
+                <label for="nombre">Nombre de la actividad</label>
+                <input type="text" id="nombre" maxlength="100" required>
+
+                <!-- Descripcion de la actividad -->
+                <label for="descripcion">Descripcion</label>
+                <textarea id="descripcion" maxlength="1000" required></textarea>
+
+                <!-- Estado actual de la actividad -->
+                <label for="estado">Estado</label>
+                <select id="estado" required>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En proceso">En proceso</option>
+                    <option value="Completada">Completada</option>
+                </select>
+
+                <!-- Botones para guardar o cancelar -->
+                <div class="botones">
+                    <button type="submit" id="btnGuardar">
+                        Registrar actividad
+                    </button>
+
+                    <button type="button" id="btnCancelar"
+                        class="secundario" hidden>
+                        Cancelar edicion
+                    </button>
+                </div>
+            </form>
+
+            <!-- Aqui aparecen los mensajes del sistema -->
+            <p id="mensaje" role="status"></p>
+        </section>
+
+        <!-- Seccion donde aparecen las actividades guardadas -->
+        <section class="panel">
+            <h2>Actividades registradas</h2>
+
+            <button type="button" id="btnActualizarLista"
+                class="secundario">
+                Actualizar lista
+            </button>
+
+            <!-- JavaScript agrega las actividades en este espacio -->
+            <div id="listaActividades" class="actividades">
+                <p>Cargando actividades...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de pagina -->
+    <footer>
+        <p>Sistema de actividades de la empresa</p>
+    </footer>
+
+</body>
+</html>
